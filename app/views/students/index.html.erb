@@ -1,0 +1,35 @@
+<h1><%=t('buttons.students')%></h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-primary">
+    <tr>
+      <th><%= t('activerecord.attributes.student.first_name') %></th>
+      <th><%= t('activerecord.attributes.student.last_name') %></th>
+      <th><%= t('index.actions') %></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% if current_user.id == 1 %>
+      <% @students.order(:first_name).each do |student| %>
+        <tr>
+          <td><%= student.first_name %></td>
+          <td><%= student.last_name %></td>
+          <td><%= link_to t('buttons.see_s'), student %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <% @students.where(user_id: current_user.id).order(:first_name).each do |student| %>
+        <tr>
+          <td><%= student.first_name %></td>
+          <td><%= student.last_name %></td>
+          <td><%= link_to t('buttons.see_s'), student %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<% if current_user.id != 1 %>
+  <%= link_to t('index.student_n'), new_student_path, class: "btn btn-dark" %>
+<% end %>

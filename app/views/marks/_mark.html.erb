@@ -1,0 +1,19 @@
+<div id="<%= dom_id mark %>" class="scaffold_record">
+  <p>
+    <strong><%= t('activerecord.attributes.mark.subject') %></strong>
+    <%= mark.subject %>
+  </p>
+  <p>
+    <strong><%= t('activerecord.attributes.mark.mark') %></strong>
+    <%= mark.mark %>
+  </p>
+  <p>
+    <strong><%= t('activerecord.attributes.mark.got_date') %></strong>
+    <%= l(mark.created_at, format: :short) %>
+  </p>
+  <p>
+    <form action="<%= [@student, mark] %>" method="post">
+      <%= button_to t('buttons.delete'), [@student, mark], method: :delete %>
+    </form>
+  </p>
+</div>

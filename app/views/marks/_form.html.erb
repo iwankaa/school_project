@@ -1,0 +1,35 @@
+
+ <%= form_with(model: [@student, mark]) do |form| %>  
+  <% if mark.errors.any? %>
+    <div id="error_explanation">
+     <h2><%= t('activerecord.errors.template.header', count: mark.errors.count) %></h2>
+
+      <ul>
+        <% mark.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :subject, style: "display: block" %>
+    <%= form.text_field :subject %>
+  </div>
+
+  <div>
+    <%= form.label :mark, style: "display: block" %>
+    <%= form.number_field :mark %>
+  </div>
+
+  <div>
+    <%= form.label :got_date, style: "display: block" %>
+    <%= form.date_field :got_date %>
+  </div>
+
+  
+
+  <div>
+  <%= form.submit t('buttons.submit') %>
+  </div>
+ <% end %>

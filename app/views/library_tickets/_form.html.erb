@@ -1,0 +1,34 @@
+<%= form_with(model: [@student, library_ticket]) do |form| %>
+  <% if library_ticket.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(library_ticket.errors.count, "error") %> prohibited this library_ticket from being saved:</h2>
+
+      <ul>
+        <% library_ticket.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :book, style: "display: block" %>
+    <%= form.text_field :book %>
+  </div>
+
+  <div>
+    <%= form.label :got_date, style: "display: block" %>
+    <%= form.datetime_field :got_date %>
+  </div>
+
+  <div>
+    <%= form.label :back_date, style: "display: block" %>
+    <%= form.datetime_field :back_date %>
+  </div>
+
+  
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

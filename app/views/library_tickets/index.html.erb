@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Library tickets</h1>
+
+<div id="library_tickets">
+  <% @library_tickets.each do |library_ticket| %>
+    <%= render library_ticket %>
+    <p>
+      <%= link_to "Show this library ticket", library_ticket %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New library ticket", new_student_library_ticket_path %>

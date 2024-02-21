@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <h1 class="display-3"><%= t('home.home_w') %></h1>
+  <h1 class="display-6"><%= t('home.home_t')%></h1>
+ <% else %>
+  <h1 class="display-3"><%= t('home.home_m1')%></h1>
+  <h1 class="display-6"><%= t('home.home_m2')%></h1>
+ <% end %>

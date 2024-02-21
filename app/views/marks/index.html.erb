@@ -1,0 +1,14 @@
+<h1><%=t('index.mark')%></h1>
+
+<div id="new_mark">
+  <%= render partial: "marks/form", locals: { mark: Mark.new } %><br><br>
+</div>
+
+<table id="marks">
+  <tbody>
+    <%= render @marks %>
+  </tbody>
+</table>
+
+
+<%= link_to t('index.back_mark'), student_path([@student, @mark]), class: "btn btn-dark" %>

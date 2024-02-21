@@ -1,0 +1,50 @@
+en:
+  en: English
+  uk_UA: Ukrainian 
+  date:
+    month_names:
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+  about:
+    logged_in: "You are logged in"
+    logged_id: "Your id is : "
+    logged_email: "Your email is :"
+    logged_teacher: "Your role is a teacher"
+    logged_admin: "Your role is administrator"
+    logged_time: "You loggen in at : "
+  home:
+    home_w: " Welcome to the school base "
+    home_t: " Wish you a good use ! "
+    home_m1: "It is the school base"
+    home_m2: "Log in to start work"
+  buttons: 
+    delete: "Delete this mark " 
+    see: "See student's marks" 
+    students: "Students"
+    see_s: "Show this student"
+    submit: "Create"
+    edit_s: "Edit student "
+    destroy_s: "Destroy this student"
+  index:
+    back_mark: "Back to student"
+    back_student: "Back to students"
+    actions: "Actions"
+    student_n: "New student"
+    mark: "Marks"
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "1 error prevented saving"  
+          other: "%{count} errors prevented saving :"

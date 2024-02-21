@@ -1,0 +1,11 @@
+<h1><%= @subject.subject_name %></h1>
+
+<h2>Students</h2>
+<ul>
+  <% @subject.students.each do |student| %>
+    <li><%= student.name %> - </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_subject_path(@subject) %>
+<%= link_to 'Back', subjects_path %>

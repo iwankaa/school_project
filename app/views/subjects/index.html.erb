@@ -1,0 +1,13 @@
+
+<h1>Subjects</h1>
+<div id = "new_subject">
+ <%= render partial: "subjects/form", locals: { subject: Subject.new}%><br></br>
+</div>
+
+<div id = "subjects">
+  <% @subjects.each do |subject| %>
+    <%= render subject %>
+  <% end %>
+</div>
+
+<%= link_to "New subject", new_subject_path %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @library_ticket %>
+
+<div>
+  <%= link_to "Edit this library ticket", edit_library_ticket_path(@library_ticket) %> |
+  <%= link_to "Back to library tickets", library_tickets_path %>
+
+  <%= button_to "Destroy this library ticket", @library_ticket, method: :delete %>
+</div>

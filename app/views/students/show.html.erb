@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @student.first_name %>
+    <%= @student.last_name %>
+  </h1>
+  <p class="lead"><%= t('activerecord.attributes.student.grade') %> <%= @student.grade %></p>
+  <hr class="my-4">
+  <p class="lead"><%= t('activerecord.attributes.student.contacts') %> <%= @student.contacts %></p>
+  <hr class="my-4">
+  <%= link_to t('buttons.see'), student_marks_path(@student), class: "btn btn-primary btn-sm" %><br></br>
+</div>
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <% if current_user.id == 1 %>
+    <%= link_to t('buttons.edit_s'), edit_student_path(@student), class: "btn btn-dark" %> 
+    <%= button_to t('buttons.destroy_s'), @student, method: :delete, class: "btn btn-danger" %>
+  <% end %>
+  <%= link_to t('index.back_student') , students_path, class: "btn btn-dark" %>
+</div>

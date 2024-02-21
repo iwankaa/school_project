@@ -1,0 +1,16 @@
+<% if current_user %>
+ <h1 class="display-4"> <%= t('about.logged_in') %></h1>
+     <ul class="list-group list-group-flush">
+      <li class="list-group-item text-primary"><%= t('about.logged_id') %> <%= current_user.id %></li>
+      <li class="list-group-item text-primary"><%= t('about.logged_email') %> <%= current_user.email %></li>
+      <li class="list-group-item text-primary"><%= t('about.logged_time') %> <%= l Time.now, format: :short %></li>
+      <% if current_user.id == 1 %>
+        <li class="list-group-item text-primary"><%= t('about.logged_admin') %></li>
+      <% else %>
+        <li class="list-group-item text-primary"><%= t('about.logged_teacher') %></li>
+      <% end %>
+    </ul>
+  </div>
+<% else %>
+  <p>You are not logged in.</p>
+<% end %>

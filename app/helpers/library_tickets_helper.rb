@@ -1,0 +1,2 @@
+module LibraryTicketsHelper
+end

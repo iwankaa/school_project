@@ -1,0 +1,100 @@
+uk_UA:
+  en: Англійська
+  uk_UA: Українська 
+  date:
+    formats:
+      short: "%b %d"
+    month_names:
+      - ""
+      - Січня
+      - Лютого
+      - Березня
+      - Квітня
+      - Травня
+      - Червня
+      - Липня
+      - Серпня
+      - Вересня
+      - Жовтня
+      - Листопада
+      - Грудня
+  time:
+    formats:
+      short: "%d %B %H:%M"
+  devise:
+    sessions:
+      user:
+        signed_out: "Ви успішно вийшли з системи."
+        signed_in: "Ви успішно увійшли в систему."
+        updated: "Профіль успішно оновлено"
+        send_instructions: "За кілька хвилин ви отримаєте електронного листа з інструкціями щодо зміни пароля"
+  
+  about: 
+     logged_in: "Вхід успішно виконано"
+     logged_id: "Ваш персональний код  : "
+     logged_email: "Ваша пошта  :"
+     logged_teacher: "Ваша роль - вчитель"
+     logged_admin: "Ваша роль - адміністратор"
+     logged_time: "Час входу : "
+
+  home:
+    home_w: " Вітаємо вас у шкільній базі  "
+    home_t: " Бажаємо гарного користування !"
+    home_m1: "Ви знаходитесь у шкільній базі "
+    home_m2: "Увійдіть для початку роботи"
+  errors:
+    messages:
+      not_saved: "Не збережено"
+  activerecord:
+    attributes:
+      mark:
+        mark: "Оцінка :"
+        subject: "Предмет :"
+        got_date: "Дата отримання оцінки :"
+      student:
+        first_name: "Ім'я "  
+        last_name: "Прізвище "
+        contacts: "Контакти "
+        grade: "Клас "
+    errors:
+      template:
+        header:
+          one: "1 помилка заборонила збереження :"
+          other: "%{count} помилок заборонили збереження :"
+      models:
+        user:
+          attributes:
+            email:
+              blank: "поле не може бути порожнім"  
+        mark:
+          attributes:
+            mark:
+              blank: "поле не може бути порожнім"  
+            subject:
+              blank: "поле не може бути порожнім"  
+        student:
+          attributes:
+            first_name:
+             blank: "поле не може бути порожнім"    
+            last_name:
+             blank: "поле не може бути порожнім"       
+  flash:
+    destroy:
+      notice: '%{model} успішно видалено'   
+  buttons: 
+    delete: "Видалити оцінку"
+    see: "Оцінки учня"
+    students: "Усі учні"
+    see_s: "Детальніше"
+    submit: "Створити" 
+    edit_s: "Редагувати дані учня "
+    destroy_s: "Видалити учня"
+  index:
+    back_mark: "Повернутися до учнів"
+    back_student: "Повернутися до учнів"
+    actions: "Дії"
+    student_n: "Новий учень"
+    mark: "Оцінки"
+
+
+   
